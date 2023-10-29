@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Temporizador estilo pomodoro">
+    <title>FocusTimer v2 - Pomodoro</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./js/main.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <button id="toggle-mode">
+            <span class="screenReaderOnly">Ativar light mode</span>
+            <i class="ph-bold ph-sun"></i>
+            <i class="ph-bold ph-moon"></i>
+        </button>
+
+        <section id="timer" class="flex">
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </section>
+
+        <section id="controls" class="flex">
+            <button 
+                data-action="toggleRunning"
+                class="ph ph-play-circle">
+                <span class="screenReaderOnly">Iniciar contador</span>
+            </button>
+            <button 
+            data-action="toggleRunning"
+                class="ph ph-pause-circle">
+                <span class="screenReaderOnly">Pausar Contador</span>
+            </button>
+            <button 
+                data-action="set"
+                class="ph ph-timer secondary">
+                <span class="screenReaderOnly">Ajustar contador</span>
+            </button>
+            <button 
+            data-action="reset"
+                class="ph ph-stop-circle secondary">
+                <span class="screenReaderOnly">Reiniciar contador</span>
+            </button>
+            <button 
+                data-action="toggleMusic"
+                class="ph ph-speaker-none secondary">
+                <span class="screenReaderOnly">Iniciar musica</span>
+            </button>
+            <button 
+                data-action="toggleMusic"
+                class="ph ph-speaker-high">
+                <span class="screenReaderOnly">Parar musica</span>
+            </button>
+
+        </section>
+        
+    </div>
+</body>
+</html>
